@@ -48,9 +48,9 @@ class Father extends GrandFather {
     public int fmoney = 3000;
 }
 
-class Child extends Father {
+class Child1 extends Father {
 
-    public Child() {
+    public Child1() {
         System.out.println("default11.Child");
     }
     public int cmoney = 1000;
@@ -64,7 +64,7 @@ class Car extends Object{ //Object클래스 상속이 생략되어있습니다..
 
 public class Ex01_Inheritance {
     public static void main(String[] args) {
-        Child child = new Child();
+        Child1 child = new Child1();
         System.out.println(child.gmoney);
         System.out.println(child.fmoney);
         System.out.println(child.cmoney);
