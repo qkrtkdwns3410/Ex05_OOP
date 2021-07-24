@@ -1,46 +1,29 @@
 package default11;
 
-public class MyTv2 {
-    boolean isPowerOn;
-    int channel;
-    int volume;
-    int prevChannel; //이전 채널(previous Channel)
+/*
+public은 접근제한이 없는 접근 제어자입니다
+default 가 붙으면 , 같은 패키지 내에서만 접근이 가능합니다
+지역변수 >> 접근제어가 붙을 수 없음
+    >> 접근제어자가 사용될 수 있는 곳 - 클래스 ,  멤버변수 , 메서드 , 생성자
+protected >> 같은 패키지안과 다른 패키지의 자손클래스에서
 
-    final int MAX_VOLUME = 100;
-    final int MIN_VOLUME = 0;
-    final int MAX_CHANNEL = 100;
-    final int MIN_CHANNEL = 1;
-
-
-    public void setChannel(int channel) {
-        if (channel > MAX_CHANNEL|| channel<MIN_CHANNEL) {
-            return;
-        }
-        this.channel = channel;
+ */
+class SutdaCard {
+    final int NUM;
+    final boolean IS_KWANG;
+    SutdaCard() {
+        this(1, true);
     }
-
-    public void setVolume(int volume) {
-        if (volume > MAX_VOLUME|| volume<MIN_VOLUME) {
-            return;
-        }
-        this.
-        this.volume = volume;
+    SutdaCard(int num, boolean isKwang) {
+        this.NUM = num;
+        this.IS_KWANG = isKwang;
     }
-
-    public void gotoPrevChannel() {
-
-
+    public String toString() {
+        return NUM + ( IS_KWANG ? "K":"");
     }
-
-    public int getChannel() {
-        return channel;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
 }
+
+
 
 
 
