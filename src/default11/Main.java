@@ -1,52 +1,50 @@
 package default11;
 
 
-import java.util.Locale;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
+        Robot[] arr = {new DanceRobot(), new DrawRobot(), new SingRobot()};
 
-
-    }
-}
-
-class Unit {
-    int x, y;
-
-    void move(int x, int y) {
-
+        for (int i = 0; i < arr.length; i++) {
+            action(arr[i]);
+        }
     }
 
-    void stop() {
-
-    }
-
-}
-class Marine extends Unit{
-
-    void stimPack() {
-    }
-
-}
-class Tank extends Unit{
-
-    void changeMode() {
+    private static void action(Robot robot) {
+        if (robot instanceof DrawRobot) {
+            DrawRobot drawRobot = (DrawRobot) robot;
+            drawRobot.draw();
+        } else if (robot instanceof SingRobot) {
+            SingRobot singRobot = (SingRobot) robot;
+            singRobot.sing();
+        } else if (robot instanceof DanceRobot) {
+            DanceRobot danceRobot = (DanceRobot) robot;
+            danceRobot.dance();
+        }
     }
 
 }
 
-class DropShip extends Unit {
-    void load() {
+class Robot{}
 
+class DanceRobot extends Robot {
+    void dance() {
+        System.out.println("춤을 춥니다.");
     }
+}
 
-    void unload() {
-
+class SingRobot extends Robot {
+    void sing() {
+        System.out.println("노래를 부릅니다.");
     }
 
 }
 
+class DrawRobot extends Robot {
+    void draw() {
+        System.out.println("그림을 그립니다.");
+    }
+}
 
 
 
