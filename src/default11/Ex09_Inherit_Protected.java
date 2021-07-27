@@ -22,7 +22,7 @@ class Ostrich extends Bird { //타조
     }
 
     @Override
-    protected void moveFast() {
+    protected void moveFast() {//확장은 가능한데 축소는 불가능.
         run();
     }
 

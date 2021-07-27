@@ -43,10 +43,7 @@ class Vcard2 {
 
     @Override
     public String toString() {
-        return "Vcard2{" +
-                "KIND='" + KIND + '\'' +
-                ", NUM=" + NUM +
-                '}';
+        return super.toString();
     }
 
 }

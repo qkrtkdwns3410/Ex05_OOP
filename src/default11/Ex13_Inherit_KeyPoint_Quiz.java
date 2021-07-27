@@ -1,14 +1,22 @@
 package default11;
 
-
-import java.util.Scanner;
-
-
-public class Main {
+public class Ex13_Inherit_KeyPoint_Quiz {
     public static void main(String[] args) {
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
