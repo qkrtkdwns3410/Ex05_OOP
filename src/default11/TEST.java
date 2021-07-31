@@ -48,7 +48,6 @@ class Product4 {
     Product4(int price) {
         this.price = price;
         this.bonuspoint = (int) (this.price / 10.0);
-
     }
 
 }
@@ -144,7 +143,6 @@ class Buyer3 {
         }
 
 
-
     }
 
 
@@ -162,11 +160,13 @@ class Buyer3 {
         int pBonus = 0;
 
         System.out.println("장바구니 담긴 물건과 그 금액 출력");
+
         for (int i = 0; i < index; i++) {
             System.out.printf("%s, %d\n", cart[i], cart[i].price);
             pSum += cart[i].price;
             pBonus += cart[i].bonuspoint;
         }
+
         System.out.printf("물건의 총액:  %d , 현재 적립될 포인트: %d 입니다.\n", pSum, pBonus);
         System.out.println("＼＼＼＼＼＼＼＼＼|||||||||||||||||||||||||||||||／／／／／／／／／／／／／");
         System.out.println("-----고객님의 보너스 포인트는 " + bonuspoint + " 입니다.-------");

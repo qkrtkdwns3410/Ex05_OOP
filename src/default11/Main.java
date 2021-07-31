@@ -2,27 +2,23 @@ package default11;
 
 
 import java.util.Scanner;
+import java.util.Stack;
 
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        while (num-- > 0) {
+            for (int i = 0; i < num; i++) {
+                String[] strArr = sc.nextLine().split(" ");
+                for (int j = strArr.length - 1; j >= 0; j--) {
+                    System.out.printf("%s ",strArr[j]);
+                }
+                System.out.println();
+            }
+        }
 
-        SystemSpeaker speaker = SystemSpeaker.getInstance();
-        SystemSpeaker speaker2 = SystemSpeaker.getInstance();
-
-        //5 ,5
-        System.out.println(speaker.getVolume());
-        System.out.println(speaker2.getVolume());
-
-        speaker.setVolume(11);
-        //11 , 11
-        System.out.println(speaker.getVolume());
-        System.out.println(speaker2.getVolume());
-
-        speaker2.setVolume(22);
-        //22, 22
-        System.out.println(speaker.getVolume());
-        System.out.println(speaker2.getVolume());
 
 
     }
