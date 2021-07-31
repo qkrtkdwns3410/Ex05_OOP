@@ -1,31 +1,26 @@
 package default11;
 
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String str = "";
-        ArrayList<String> strList = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            str = in.readLine();
-            if (str == null) {
-                strList.add("");
-            } else {
-                strList.add(str);
-            }
-        }
-        for (String strr : strList) {
-            System.out.println(strr);
-        }
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int K = sc.nextInt();
+
+        int ans = fac(N) / (fac(N - K) * fac(K));
+        System.out.println(ans);
     }
+
+    static int fac(int num) {
+        if (num == 0) {
+            return 1;
+        }
+        return num * fac(num - 1);
+    }
+
 }
 
 
